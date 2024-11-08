@@ -13,9 +13,7 @@ const options = {
 };
 
 const provider = new WebSocketProvider(rpc_node, options);
-
 const web3 = new Web3(provider);
-
 
 provider.on("error", (error) => console.error(`web3 WebSocket error ${error}`));
 provider.on("end", (error) => console.log(`web3: WebSocket connection ended, attempting to reconnect... ${error}`));

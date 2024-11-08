@@ -3,11 +3,18 @@ const numberOfWallet = 2    // Number of wallets to create
 
 const rpc_node = "wss://apechain.calderachain.xyz/ws"
 
+const TOP_HOLDERS_FILE = './data/top_holders.json';
+const ALL_HOLDERS_FILE = './data/all_holders.json';
+
 const apiURL = 'https://apechain.calderaexplorer.xyz/api/v2/tokens/0xA3d57F48A2E1eCf6CD7140904B6fbF7b6A37063f/holders';
 
-const tokenAddress = "0x6bce0fd099a23da3d6dea6927856a9be2485c9b9"
+const tokenAddress = "0xa3d57f48a2e1ecf6cd7140904b6fbf7b6a37063f"
 
-const camelotAddress = "0xB72437016901e7d932C71E4E0b7275da134B83A1"
+const pairAddress = "0x0d59cb89dc8116102384d1b70fc4e04ad19e8aed"
+
+const camelotAddress = "0x79110e1826e44369842E33428512815721861Fb1"
+
+const camelotAddress_old = "0xB72437016901e7d932C71E4E0b7275da134B83A1";
 
 
 const erc20ABI = [
@@ -802,8 +809,12 @@ const erc20ABI = [
 module.exports = {
     numberOfWallet,
     rpc_node,
+	TOP_HOLDERS_FILE,
+	ALL_HOLDERS_FILE,
 	apiURL,
 	tokenAddress,
+	pairAddress,
     erc20ABI,
+	camelotAddress_old,
 	camelotAddress
 }
