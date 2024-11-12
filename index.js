@@ -2,6 +2,7 @@
 const {Web3}= require("web3");
 const fs = require('fs');
 const {
+    BLOCK_NUMBER,
     TOP_HOLDERS_FILE,
 	erc20ABI,
     tokenAddress,
@@ -28,7 +29,7 @@ async function main() {
 }
 
 async function fetchPastEvents() {
-    const startBlock = 3060494;
+    const startBlock = BLOCK_NUMBER;
     const endBlock = 'latest';
     
     try {

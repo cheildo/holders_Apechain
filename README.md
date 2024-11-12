@@ -1,2 +1,2 @@
 # holders_Apechain
-Monitor the top 100 holder wallet addresses
+Monitor top holder wallet addresses on ApeChain

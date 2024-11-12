@@ -1,10 +1,12 @@
 
-const numberOfWallet = 2    // Number of wallets to create
+const numberOfWallet = 30    // Number of top wallets to fetch
+const BLOCK_NUMBER = 3070972
 
 const rpc_node = "wss://apechain.calderachain.xyz/ws"
 
-const TOP_HOLDERS_FILE = './data/top_holders.json';
-const ALL_HOLDERS_FILE = './data/all_holders.json';
+const TOP_HOLDERS_FILE = './data/top_holders_20241101.json';
+const ALL_HOLDERS_FILE = './data/all_holders_20241101.json';
+const CURRENT_TOP_HOLDERS_FILE = './data/top_holders_now.json';
 
 const apiURL = 'https://apechain.calderaexplorer.xyz/api/v2/tokens/0xA3d57F48A2E1eCf6CD7140904B6fbF7b6A37063f/holders';
 
@@ -808,9 +810,11 @@ const erc20ABI = [
 
 module.exports = {
     numberOfWallet,
+	BLOCK_NUMBER,
     rpc_node,
 	TOP_HOLDERS_FILE,
 	ALL_HOLDERS_FILE,
+	CURRENT_TOP_HOLDERS_FILE,
 	apiURL,
 	tokenAddress,
 	pairAddress,
